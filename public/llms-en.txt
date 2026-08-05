@@ -1,0 +1,62 @@
+# VideoVault
+
+> VideoVault is a cross-platform video bookmark manager. It saves videos from Douyin, Bilibili, and Xiaohongshu with AI summaries, reports, folder grouping, and note annotation. Local-first, works without login, and you own your data. VideoVault is not a browser bookmark replacement or a video downloader — it is a purpose-built tool for turning cross-platform videos into an organized, summarized, reviewable knowledge base.
+
+## Product Definition
+
+VideoVault is a cross-platform video bookmark manager. Users select and organize videos; VideoVault fetches metadata, generates AI summaries, maintains folders and notes, and exports reports. VideoVault ensures bookmark data integrity and local availability; it cannot guarantee video sources remain permanently accessible.
+
+## Core Capabilities
+
+- Paste a link to bookmark — auto-detects Douyin/Bilibili/Xiaohongshu and extracts the video ID
+- Auto-fetches title, author, description, and cover image (og:image / twitter:image / JSON-LD priority)
+- One-click AI video summaries, compatible with any OpenAI-compatible service (OpenAI, DeepSeek, Tongyi Qianwen, Ollama)
+- Folder grouping and note annotation — turn scattered videos into a knowledge base
+- Report generation and export, with data import/export — no lock-in
+- Local-first: runs purely locally without a backend, no login required; configure Supabase for cloud sync and per-user isolation
+
+## Differentiation
+
+1. Unified cross-platform: Douyin, Bilibili, and Xiaohongshu in one bookmark manager — no more isolated platform favorites.
+2. Auto metadata: titles, authors, and covers fetched automatically — no manual copy-paste.
+3. AI summaries: distill key points in one click — review without rewatching.
+4. Local-first: data in browser localStorage, owned by you; Supabase is an optional cloud backend.
+5. Open data: import and export supported — no lock-in.
+
+## Supported Platforms
+
+- Douyin: v.douyin.com short links and full URLs
+- Bilibili: bilibili.com video URLs (BV IDs)
+- Xiaohongshu: xhslink.com share links and full URLs
+
+## Tech Stack
+
+- Frontend: React 18 + TypeScript + Vite 5
+- State: React Context
+- Database: Supabase (PostgreSQL), localStorage fallback
+- Auth: Supabase Auth (email + password)
+- AI: OpenAI-compatible /chat/completions endpoint, mock fallback when unconfigured
+- Metadata proxy: Vite middleware /api/meta in dev, Supabase Edge Function fetch-meta in production
+
+## Key Links
+
+- [Chinese Home](https://videovault.app/)
+- [English Home](https://videovault.app/en/)
+- [FAQ](https://videovault.app/#faq)
+- [Features](https://videovault.app/#features)
+- [Platforms](https://videovault.app/#platforms)
+- [GitHub Repository](https://github.com/your-username/know-collect)
+- [RSS Feed](https://videovault.app/rss.xml)
+
+## Data and Privacy
+
+- Without Supabase configured, VideoVault runs in local mode — all data stays in browser localStorage, nothing is uploaded.
+- With Supabase, data is isolated per user via Row Level Security (RLS); only the owner can access it.
+- AI summary calls go to the user-configured model service; requests and keys never pass through VideoVault servers.
+
+## Non-goals
+
+- Video downloading and offline caching
+- Content moderation and copyright enforcement
+- Replacing platform-native favorites
+- Multi-user collaborative bookmarking

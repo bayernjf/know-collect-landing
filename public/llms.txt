@@ -1,0 +1,62 @@
+# VideoVault
+
+> VideoVault 是跨平台视频收藏管理工具，支持抖音、B站、小红书视频收藏，提供 AI 智能总结、报告生成、文件夹分组与笔记批注。本地优先，无需登录即可使用，数据归用户所有。VideoVault 不是浏览器收藏夹的替代品，也不是单纯的视频下载器，而是把跨平台视频沉淀为可整理、可总结、可回顾知识库的专用工具。
+
+## 产品定义
+
+VideoVault 属于跨平台视频收藏管理工具。用户负责选择与组织视频，VideoVault 负责抓取元数据、生成 AI 总结、维护文件夹与笔记、导出报告。VideoVault 可以保证收藏数据完整与本地可用，不能保证视频源永久可访问。
+
+## 核心能力
+
+- 粘贴链接即收藏，自动识别抖音/B站/小红书平台并提取视频 ID
+- 自动抓取标题、作者、描述与封面图（og:image/twitter:image/JSON-LD 优先级）
+- AI 一键生成视频总结，兼容 OpenAI/DeepSeek/通义千问/Ollama 等任意 OpenAI 兼容服务
+- 文件夹分组、笔记批注，把零散视频沉淀为知识库
+- 报告生成与导出，支持数据导入导出，无锁定
+- 本地优先：未配置后端时纯本地运行，无需登录；配置 Supabase 后开启云端同步与多端隔离
+
+## 差异化
+
+1. 跨平台统一：抖音、B站、小红书三大平台一个收藏夹，告别各平台收藏互相隔离。
+2. 自动元数据：标题/作者/封面自动抓取，不必手动复制粘贴。
+3. AI 总结：一键提炼视频要点，复习不必重看整段。
+4. 本地优先：数据存浏览器 localStorage，归用户所有；Supabase 为可选云端后端。
+5. 开放数据：支持导入导出，不锁定数据。
+
+## 支持平台
+
+- 抖音：v.douyin.com 短链与完整链接
+- B站：bilibili.com 视频链接（BV 号）
+- 小红书：xhslink.com 分享链接与完整链接
+
+## 技术栈
+
+- 前端：React 18 + TypeScript + Vite 5
+- 状态管理：React Context
+- 数据库：Supabase（PostgreSQL），本地 fallback 为 localStorage
+- 认证：Supabase Auth（邮箱+密码）
+- AI：OpenAI 兼容 /chat/completions 接口，无配置时 fallback 为 mock
+- 元数据代理：开发期 Vite 中间件 /api/meta，生产期 Supabase Edge Function fetch-meta
+
+## 关键链接
+
+- [中文首页](https://videovault.app/)
+- [English Home](https://videovault.app/en/)
+- [常见问题](https://videovault.app/#faq)
+- [核心能力](https://videovault.app/#features)
+- [支持平台](https://videovault.app/#platforms)
+- [GitHub 仓库](https://github.com/your-username/know-collect)
+- [RSS 订阅](https://videovault.app/rss.xml)
+
+## 数据与隐私
+
+- 未配置 Supabase 时进入本地模式，所有数据存于浏览器 localStorage，不上传任何服务器。
+- 配置 Supabase 后，数据基于行级安全（RLS）按用户隔离存储，仅本人可访问。
+- AI 总结调用由用户配置的模型服务，请求与密钥不经过 VideoVault 服务器。
+
+## 非目标
+
+- 视频下载与离线缓存
+- 视频内容审核与版权判定
+- 替代平台原生收藏功能
+- 多人协作收藏
