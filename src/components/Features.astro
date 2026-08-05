@@ -1,0 +1,82 @@
+---
+import { useTranslations, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const features =
+  lang === 'zh'
+    ? [
+        {
+          title: '跨平台收藏',
+          desc: '一条链接收藏抖音、B站、小红书视频，支持短链与分享链接。自动识别平台、提取视频 ID，无需手动归类。',
+        },
+        {
+          title: '自动元数据抓取',
+          desc: '粘贴链接后自动抓取标题、作者、描述与封面图。封面来源优先级覆盖 og:image、twitter:image、JSON-LD，加载失败回退平台图标。',
+        },
+        {
+          title: 'AI 智能总结',
+          desc: '兼容 OpenAI、DeepSeek、通义千问、Ollama 等任意 OpenAI 兼容服务。一键生成视频总结，未配置时回退 mock 模式，流程不中断。',
+        },
+        {
+          title: '文件夹分组与笔记批注',
+          desc: '用文件夹组织收藏，为视频添加个人笔记与批注。把零散视频沉淀为可检索、可回顾的知识库。',
+        },
+        {
+          title: '报告生成与导出',
+          desc: '一键导出收藏报告，支持数据导入导出。便于备份、迁移与跨工具协作，数据不锁定。',
+        },
+        {
+          title: '本地优先，数据归你',
+          desc: '未配置后端时进入纯本地模式，无需登录，数据存于浏览器。配置 Supabase 后开启云端同步与多端隔离。',
+        },
+      ]
+    : [
+        {
+          title: 'Cross-platform bookmarking',
+          desc: 'One link saves videos from Douyin, Bilibili, and Xiaohongshu. Short links and share links supported. Platform auto-detected, video ID extracted — no manual sorting.',
+        },
+        {
+          title: 'Auto metadata fetching',
+          desc: 'Paste a link and VideoVault fetches the title, author, description, and cover image. Cover sources cover og:image, twitter:image, and JSON-LD, falling back to platform icons on error.',
+        },
+        {
+          title: 'AI summaries',
+          desc: 'Compatible with any OpenAI-compatible service: OpenAI, DeepSeek, Tongyi Qianwen, Ollama. Generate video summaries in one click. Falls back to mock mode when unconfigured — flow never breaks.',
+        },
+        {
+          title: 'Folders and notes',
+          desc: 'Organize bookmarks with folders and add personal notes and annotations. Turn scattered videos into a searchable, reviewable knowledge base.',
+        },
+        {
+          title: 'Reports and export',
+          desc: 'Export bookmark reports in one click. Data import and export supported for backup, migration, and cross-tool collaboration. No lock-in.',
+        },
+        {
+          title: 'Local-first, you own the data',
+          desc: 'Without a backend, VideoVault runs in pure local mode — no login, data stays in the browser. Configure Supabase to enable cloud sync and per-user isolation.',
+        },
+      ];
+---
+
+<section id="features" class="border-t border-ink-800/60 bg-ink-900/30 py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold text-ink-50 sm:text-4xl">{t('features.title')}</h2>
+      <p class="mt-3 text-ink-400">{t('features.subtitle')}</p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {features.map((f) => (
+        <blockquote class="rounded-xl border border-ink-800 bg-ink-900/60 p-6">
+          <h3 class="text-lg font-semibold text-ink-50">{f.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">{f.desc}</p>
+        </blockquote>
+      ))}
+    </div>
+  </div>
+</section>

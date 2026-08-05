@@ -1,0 +1,44 @@
+---
+import { useTranslations, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const cases =
+  lang === 'zh'
+    ? [
+        { title: '学习收藏', desc: '把教程、讲座、技术分享收进同一文件夹，AI 总结提炼要点，复习时不必重看整段视频。' },
+        { title: '追更整理', desc: '关注 UP 主或博主的长连载，用文件夹分组归档，配合笔记记录每期关键信息。' },
+        { title: '素材库', desc: '收集灵感、案例、参考视频，批注标记关键时间点或画面，创作时快速调取。' },
+        { title: '稍后观看', desc: '刷到的好视频先收下，AI 总结帮你判断是否值得完整观看，节省时间。' },
+      ]
+    : [
+        { title: 'Learning', desc: 'Save tutorials, lectures, and tech talks into one folder. AI summaries distill key points so you can review without rewatching.' },
+        { title: 'Follow-along', desc: 'Archive long series from creators you follow. Group with folders and note key info per episode.' },
+        { title: 'Material library', desc: 'Collect inspiration, cases, and reference videos. Annotate key moments or frames for quick retrieval during creation.' },
+        { title: 'Watch later', desc: 'Bookmark videos as you scroll. AI summaries help you decide what is worth a full watch, saving time.' },
+      ];
+---
+
+<section id="usecases" class="border-t border-ink-800/60 bg-ink-900/30 py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold text-ink-50 sm:text-4xl">{t('usecases.title')}</h2>
+      <p class="mt-3 text-ink-400">{t('usecases.subtitle')}</p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {cases.map((c) => (
+        <div class="flex gap-4 rounded-xl border border-ink-800 bg-ink-900/60 p-6">
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-ink-50">{c.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">{c.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
