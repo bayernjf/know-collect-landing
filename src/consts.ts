@@ -16,8 +16,8 @@ export const DEFAULT_LOCALE = 'zh';
 // 社交与外部链接
 // TODO: 替换为实际 GitHub 仓库地址
 export const SOCIAL = {
-  github: 'https://github.com/your-username/know-collect',
-  docs: 'https://github.com/your-username/know-collect#readme',
+  github: 'https://github.com/bayernjf/know-collect',
+  docs: 'https://github.com/bayernjf/know-collect#readme',
   email: 'hello@videovault.app',
 };
 
