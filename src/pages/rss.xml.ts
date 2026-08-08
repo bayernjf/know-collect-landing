@@ -9,7 +9,7 @@ export async function GET(context: APIContext) {
 
   return rss({
     title: 'VideoVault Blog',
-    description: 'Cross-platform video bookmarking — practices, AI summaries, and tips.',
+    description: 'Cross-platform video bookmarking: practices, AI summaries, and tips.',
     site: context.site ?? SITE_URL,
     items: sorted.map((post) => ({
       title: post.data.title,

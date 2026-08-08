@@ -3,8 +3,8 @@
 
 export const SITE_URL = 'https://videovault.app';
 export const SITE_NAME = 'VideoVault';
-export const SITE_TITLE = 'VideoVault — 跨平台视频收藏管理工具';
-export const SITE_TITLE_EN = 'VideoVault — Cross-platform Video Bookmark Manager';
+export const SITE_TITLE = 'VideoVault | 跨平台视频收藏管理工具';
+export const SITE_TITLE_EN = 'VideoVault | Cross-platform Video Bookmark Manager';
 export const SITE_DESCRIPTION =
   'VideoVault 是跨平台视频收藏管理工具，支持抖音、B站、小红书视频收藏，AI 智能总结、报告生成、文件夹分组与笔记批注。本地优先，无需登录即可使用。';
 export const SITE_DESCRIPTION_EN =
