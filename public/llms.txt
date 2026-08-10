@@ -40,11 +40,11 @@ VideoVault 属于跨平台视频收藏管理工具。用户负责选择与组织
 
 ## 关键链接
 
-- [中文首页](https://videovault.app/)
-- [English Home](https://videovault.app/en/)
-- [常见问题](https://videovault.app/#faq)
-- [核心能力](https://videovault.app/#features)
-- [支持平台](https://videovault.app/#platforms)
+- [中文首页](https://videovault.app/zh/)
+- [English Home](https://videovault.app/)
+- [常见问题](https://videovault.app/zh/#faq)
+- [核心能力](https://videovault.app/zh/#features)
+- [支持平台](https://videovault.app/zh/#platforms)
 - [GitHub 仓库](https://github.com/your-username/know-collect)
 - [RSS 订阅](https://videovault.app/rss.xml)
 

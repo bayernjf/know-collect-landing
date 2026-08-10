@@ -40,8 +40,8 @@ VideoVault is a cross-platform video bookmark manager. Users select and organize
 
 ## Key Links
 
-- [Chinese Home](https://videovault.app/)
-- [English Home](https://videovault.app/en/)
+- [Chinese Home](https://videovault.app/zh/)
+- [English Home](https://videovault.app/)
 - [FAQ](https://videovault.app/#faq)
 - [Features](https://videovault.app/#features)
 - [Platforms](https://videovault.app/#platforms)

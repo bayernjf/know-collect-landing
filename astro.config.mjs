@@ -11,12 +11,12 @@ export default defineConfig({
   site: SITE,
   integrations: [sitemap({
     i18n: {
-      defaultLocale: 'zh',
+      defaultLocale: 'en',
       locales: { zh: 'zh-CN', en: 'en-US' },
     },
   })],
   i18n: {
-    defaultLocale: 'zh',
+    defaultLocale: 'en',
     locales: ['zh', 'en'],
     routing: {
       prefixDefaultLocale: false,

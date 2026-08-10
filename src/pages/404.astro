@@ -5,16 +5,16 @@ import Footer from '../components/Footer.astro';
 import { SITE_NAME } from '../consts';
 import { localizePath } from '../i18n';
 
-const lang = 'zh' as const;
+const lang = 'en' as const;
 ---
 
-<BaseLayout lang={lang} title={`404: 页面不存在 | ${SITE_NAME}`}>
+<BaseLayout lang={lang} title={`404: Page Not Found | ${SITE_NAME}`}>
   <Nav lang={lang} />
   <main class="mx-auto max-w-2xl px-4 py-32 text-center sm:px-6">
     <p class="font-mono text-sm uppercase tracking-wide text-brand-300">404</p>
-    <h1 class="mt-4 text-3xl font-bold text-ink-50">页面不存在</h1>
-    <p class="mt-3 text-ink-400">你访问的页面不存在，或者已经被移动。</p>
-    <a href={localizePath('/', lang)} class="mt-8 inline-flex items-center justify-center rounded-lg bg-brand-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-brand-600">回到首页</a>
+    <h1 class="mt-4 text-3xl font-bold text-ink-50">Page Not Found</h1>
+    <p class="mt-3 text-ink-400">The page you are looking for does not exist or has been moved.</p>
+    <a href={localizePath('/', lang)} class="mt-8 inline-flex items-center justify-center rounded-lg bg-brand-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-brand-600">Back to home</a>
   </main>
   <Footer lang={lang} />
 </BaseLayout>
