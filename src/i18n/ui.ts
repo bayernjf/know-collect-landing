@@ -65,13 +65,13 @@ export const ui = {
     'hero.cta.secondary': 'Read the Docs',
 
     'features.title': 'Why VideoVault',
-    'features.subtitle': 'Not just links — turn videos into an organized, summarized, searchable knowledge base',
+    'features.subtitle': 'Not just links: turn videos into an organized, summarized, searchable knowledge base',
 
     'platforms.title': 'Three platforms, one bookmark manager',
     'platforms.subtitle': 'Paste a link to save. Titles, authors, and covers are auto-fetched',
 
     'usecases.title': 'Use Cases',
-    'usecases.subtitle': 'Learning, follow-along, or material gathering — VideoVault keeps your videos organized',
+    'usecases.subtitle': 'Learning, follow-along, or material gathering: VideoVault keeps your videos organized',
 
     'compare.title': 'Compared to common alternatives',
     'compare.subtitle': 'More capable than browser bookmarks, Notion notes, or platform-native favorites',

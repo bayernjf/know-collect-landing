@@ -58,7 +58,7 @@ export const faqData: Record<'zh' | 'en', FaqItem[]> = {
     {
       question: 'Where is my video data stored, and who owns it?',
       answer:
-        'Data is dual-written: localStorage for instant saves, Supabase for async sync. Without Supabase configured, VideoVault runs in pure local mode — all data stays in the browser, no login required, fully owned by you. With Supabase, data is isolated per user via Row Level Security (RLS).',
+        'Data is dual-written: localStorage for instant saves, Supabase for async sync. Without Supabase configured, VideoVault runs in pure local mode: all data stays in the browser, no login required, fully owned by you. With Supabase, data is isolated per user via Row Level Security (RLS).',
     },
     {
       question: 'Which AI models are supported for summaries? Is there a fee?',
@@ -68,12 +68,12 @@ export const faqData: Record<'zh' | 'en', FaqItem[]> = {
     {
       question: 'Can I use it without logging in? Is Supabase required?',
       answer:
-        'Yes. Without Supabase configured, VideoVault automatically enters local mode — no login required, all features fully usable. Local mode stores data in browser localStorage. Supabase is an optional backend for cloud sync and multi-device collaboration.',
+        'Yes. Without Supabase configured, VideoVault automatically enters local mode: no login required, all features fully usable. Local mode stores data in browser localStorage. Supabase is an optional backend for cloud sync and multi-device collaboration.',
     },
     {
       question: 'How is VideoVault different from browser bookmarks or Notion notes?',
       answer:
-        'Browser bookmarks only store links — no metadata, no summaries, no grouping. Notion requires manually pasting titles and notes. VideoVault auto-fetches titles, authors, and covers, generates AI summaries in one click, and supports folder grouping, note annotation, report export, and data import/export — purpose-built for video bookmarking.',
+        'Browser bookmarks only store links: no metadata, no summaries, no grouping. Notion requires manually pasting titles and notes. VideoVault auto-fetches titles, authors, and covers, generates AI summaries in one click, and supports folder grouping, note annotation, report export, and data import/export, purpose-built for video bookmarking.',
     },
     {
       question: 'How do I deploy my own VideoVault instance?',
