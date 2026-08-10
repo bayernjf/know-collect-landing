@@ -11,7 +11,7 @@ export const SITE_DESCRIPTION_EN =
   'VideoVault is a cross-platform video bookmark manager. Save videos from Douyin, Bilibili, and Xiaohongshu with AI summaries, reports, folders, and notes. Local-first, works without login.';
 export const AUTHOR = 'VideoVault';
 export const LOCALES = ['zh', 'en'] as const;
-export const DEFAULT_LOCALE = 'zh';
+export const DEFAULT_LOCALE = 'en';
 
 // 社交与外部链接
 // TODO: 替换为实际 GitHub 仓库地址
