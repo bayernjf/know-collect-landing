@@ -27,4 +27,4 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://videovault.app/sitemap-index.xml
+Sitemap: https://know-collect.bayjf.com/sitemap-index.xml
