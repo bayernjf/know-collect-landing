@@ -18,7 +18,7 @@ export const DEFAULT_LOCALE = 'en';
 export const SOCIAL = {
   github: 'https://github.com/bayernjf/know-collect',
   docs: 'https://github.com/bayernjf/know-collect#readme',
-  email: 'hello@videovault.app',
+  email: 'b4yernjf@gmail.com',
 };
 
 // 默认 OG 图片
