@@ -22,6 +22,8 @@ export const ui = {
     'hero.badge': '跨平台视频收藏管理工具',
     'hero.title': '把抖音、B站、小红书的视频收进一个收藏夹',
     'hero.subtitle': 'VideoVault 支持跨平台视频收藏，自动抓取标题与封面，AI 一键生成视频总结，提供文件夹分组、笔记批注与报告导出。本地优先，无需登录即可使用。',
+    'hero.cta.app': '安装扩展',
+    'cta.comingSoon': '即将上架',
     'hero.cta.primary': '在 GitHub 查看',
     'hero.cta.secondary': '阅读文档',
 
@@ -61,6 +63,8 @@ export const ui = {
     'hero.badge': 'Cross-platform Video Bookmark Manager',
     'hero.title': 'Save Douyin, Bilibili, and Xiaohongshu videos in one place',
     'hero.subtitle': 'VideoVault bookmarks videos across platforms, auto-fetches titles and covers, generates AI summaries, and offers folders, notes, and report export. Local-first, works without login.',
+    'hero.cta.app': 'Install the extension',
+    'cta.comingSoon': 'Coming soon',
     'hero.cta.primary': 'View on GitHub',
     'hero.cta.secondary': 'Read the Docs',
 
