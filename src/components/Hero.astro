@@ -28,11 +28,27 @@ const t = useTranslations(lang);
     </p>
 
     <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <span class="group relative inline-flex w-full sm:w-auto">
+        <span
+          role="button"
+          aria-disabled="true"
+          tabindex="0"
+          class="inline-flex w-full cursor-not-allowed items-center justify-center rounded-lg bg-brand-500/40 px-6 py-3 text-sm font-medium text-white/70 sm:w-auto"
+        >
+          {t('hero.cta.app')}
+        </span>
+        <span
+          role="tooltip"
+          class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-ink-700 bg-ink-900 px-2.5 py-1 text-xs text-ink-100 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+        >
+          {t('cta.comingSoon')}
+        </span>
+      </span>
       <a
         href={SOCIAL.github}
         target="_blank"
         rel="noopener"
-        class="inline-flex w-full items-center justify-center rounded-lg bg-brand-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-brand-600 sm:w-auto"
+        class="inline-flex w-full items-center justify-center rounded-lg border border-ink-700 px-6 py-3 text-sm font-medium text-ink-200 transition hover:border-ink-500 hover:text-white sm:w-auto"
       >
         {t('hero.cta.primary')}
       </a>
@@ -40,7 +56,7 @@ const t = useTranslations(lang);
         href={SOCIAL.docs}
         target="_blank"
         rel="noopener"
-        class="inline-flex w-full items-center justify-center rounded-lg border border-ink-700 px-6 py-3 text-sm font-medium text-ink-200 transition hover:border-ink-500 hover:text-white sm:w-auto"
+        class="inline-flex w-full items-center justify-center px-6 py-3 text-sm font-medium text-ink-300 transition hover:text-white sm:w-auto"
       >
         {t('hero.cta.secondary')}
       </a>
