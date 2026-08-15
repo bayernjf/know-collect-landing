@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 // 占位域名，部署到自定义域名后需同步修改
-const SITE = 'https://videovault.app';
+const SITE = 'https://know-collect.bayjf.com';
 
 // https://astro.build/config
 export default defineConfig({

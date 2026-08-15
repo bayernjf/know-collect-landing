@@ -1,7 +1,7 @@
 // 站点级常量，集中管理便于跨页面/组件复用
 // 部署到自定义域名后，需同步修改 astro.config.mjs 的 site 字段
 
-export const SITE_URL = 'https://videovault.app';
+export const SITE_URL = 'https://know-collect.bayjf.com';
 export const SITE_NAME = 'VideoVault';
 export const SITE_TITLE = 'VideoVault | 跨平台视频收藏管理工具';
 export const SITE_TITLE_EN = 'VideoVault | Cross-platform Video Bookmark Manager';
@@ -18,7 +18,7 @@ export const DEFAULT_LOCALE = 'en';
 export const SOCIAL = {
   github: 'https://github.com/bayernjf/know-collect',
   docs: 'https://github.com/bayernjf/know-collect#readme',
-  email: 'hello@videovault.app',
+  email: 'b4yernjf@gmail.com',
 };
 
 // 默认 OG 图片
